@@ -1,68 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practical-5</title>
+    <title>Image map</title>
     <style>
-       body{
-           background-color: grey;
-           text-align: center;
-       }
-       h2{
-           color:white;
-       }
+        #class1 {
+            display: inline-block;
+            display:block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #class2 {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            
+        }
+        img[usemap] ,map area{
+            outline:none;
+        }
     </style>
-    
-    </head>
-<body>
-    <img
-         
-     src="img/p51.png"  alt=
-    "blank" usemap="#map1" />
 
-<map name="map1">
-    <area target="blank" href="https://github.com/mrtripathi11/FullStackPracticals/blob/master/index.html/index1.html" shape="rect" 
-    coords="44,32,114,60">
+</head>
 
-    <area target="blank" href="https://github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical1.html"  shape="rect" 
-    coords="184,32,350,60">
+<body style="background-color: lightgray;">
+    <img id="class1" src="..\image\Capture13.PNG" alt="Main Heading" usemap="#map1">
+    <map  name="map1">
+    <area shape="rect" coords="7,11,145,81" href="https://github.com/mrtripathi11/FullStackPracticals" alt="home">
+    <map name="map1">
+    <area shape="rect" coords="150,10,371,82"
+        href="Practical1.html" alt="Practical1">
+    <area shape="rect" coords="376,12,595,82"
+        href="Practical2.html" alt="Practical2">
+    <area shape="rect" coords="600,11,822,82"
+        href="Practical3.html" alt="Practical3">
+    <area shape="rect" coords="826,11,1046,80"
+        href="Practical4.html" alt="Practical4">
+    <area shape="rect" coords="1051,11,1281,81"
+        href="#" alt="Practical5">
+    </map>
+    <h2 style="text-align: center; color:white;">Introduction to Front-End Technologies.</h2>
+    <img id="class2" src="..\image\Practical-5.jpg" alt="Main image" usemap="#map2">
+    <map name="map2">
+        <area shape="rect" coords="18,9,172,168" href="html.html" alt="HTML">
+        <area shape="circle" coords="290,95,85" href="css.html" alt="CSS">
+        <area shape="rect" coords="23,197,171,337" href="javascript.html" alt="JAVASCRIPT">
+        <area shape="poly" coords="288,202,346,225,337,300,287,329,239,302,231,225" href="boot.html" alt="BOOTSTRAP">
 
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical2.html" shape="rect" 
-    coords="420,32,595,60">
-    
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical3.html" shape="rect" 
-    coords="676,32,850,60">
-    
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical4.html" shape="rect" 
-    coords="930,32,1105,60">
+    </map>
+    <h3 style="color:red; text-align: center;">Click on any part of logo to know more about these technologies</h3>
 
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical5.html" shape="rect" 
-    coords="1167,32,1350,60">
-</map>
-<h2> Introduction to Front-End Technologies</h2>
 
-<img 
-     
-     src="img/p52.PNG"
-     style="border: 10px groove red"
-       alt=
-     "blank"
-      usemap="#map2" />
-<map name="map2">
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical5.1.html" shape="rect" 
-    coords= "24,7,204,200">
 
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical5.2.html"  shape="circle" 
-    coords= "340,100,111">
 
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical5.3.html" shape="rect" 
-    coords= "27,230,205,402">
-
-    <area target="blank" href="github.com/mrtripathi11/FullStackPracticals/blob/master/Practical/Practical5.4.html" shape="poly" 
-    coords= "270,261,340,236,415,261,402,356,343,391,282,356">
-
-    <h3 style="color:red">Click on any part of logo to know more about these technologies.</h3>
-</map>
 </body>
+
 </html>
