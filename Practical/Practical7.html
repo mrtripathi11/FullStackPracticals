@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-7</title>
+    <style>
+        @media( min-width: 250px){
+        #container
+        {
+            border: 5px solid lightgray;
+            width:97%;
+            margin: 0px auto;
+            padding:8px;
+            width:100vw;
+
+
+        }
+        #header
+        {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            height:80px;
+            background-color: darkslategray;
+            font-size: 40px;
+            width:100vw;
+            border-radius: 15px;
+        }
+        #banner
+        {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            height:700px;
+            background-color: peru;
+            font-size: 40px;
+            margin-top:8px;
+            width:100vw;
+            border-radius: 15px;
+        }
+        #section-1
+        {
+            justify-content: center;
+            background-color:indianred;
+            font-size: 40px;
+            margin-top: 8px;
+            height:480px;
+            color:white;
+            width:100vw;
+            border-radius: 15px;
+
+        }
+        
+        .circle
+        {
+            border-radius: 50%;
+            background-color:cadetblue;
+            width:305px;
+            height:305px;
+            float:left;
+            margin:31px;
+            border-radius: 15px;
+        }
+        #section-2
+        {
+
+            background-color:white;
+            height:650px;
+            font-size:40px;
+            margin-top: 8px;
+            width:100vw;
+            border-radius: 15px;
+            
+    
+        }
+        #left{
+            display:flex;
+            float:left;
+            justify-content: center;
+            align-items: center;
+            width:50%;
+            background-color: mediumpurple;
+            margin:8px 8px 8px 0px;
+            height:87%;
+            border-radius: 15px;
+            
+        }
+        #right{
+            float:right;
+            width:48%;
+            background-color:white;
+            height:87%;
+            margin:8px 0px 8px 8px;
+            border-radius: 15px;
+            
+        }
+        .a
+        {
+            width:100%;
+            height:173px;
+            background-color:turquoise;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+
+        }
+        #section-3
+        {
+            background-color:white;
+            height:530px;
+            font-size:40px;
+            margin-top: 8px;
+            width:100vw;
+            border-radius: 15px;
+        }
+        .rect
+        {
+            background-color:firebrick;
+            width:301px;
+            height:380px;
+            float:left;
+            margin: 8px 33px;
+            border-radius: 15px;
+        }
+        #section-4
+        {
+            background-color:white;
+            height:145px;
+            font-size: 40px;
+            margin-top:8px;
+            margin-bottom: 0px;
+            width:100vw;
+            border-radius: 15px;
+        }
+        #footer
+        {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            height:80px;
+            background-color: darkslategray;
+            font-size: 40px;
+            border-radius: 15px;
+        }
+        #section1::after{
+            display:block;
+            content:'';
+            clear:both;
+        }
+        #left::after{
+            display:block;
+            content:'';
+            clear:both;
+        }
+        #right::after{
+            display:block;
+            content:'';
+            clear:both;
+        }
+        #section2::after{
+            display:block;
+            content:'';
+            clear:both;
+        }
+        #section3::after{
+            display:block;
+            content:'';
+            clear:both;
+        }
+        #section4::after{
+            display:block;
+            content:'';
+            clear:both;
+        }}
+    </style>
+</head>
+<body>
+    <div id="container">
+<div id="header">Header</div>
+<div id="banner">Banner</div>
+<div id="section-1">
+    <div style="justify-content: center; display: flex; padding: 10px;">Section-1</div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+</div>
+<div id="section-2">
+    <div style="justify-content: center; display:flex; padding: 10px;">Section-2</div>
+    <div id="left">Main Content</div>
+    <div id="right">
+    <div class="a">Article-1</div>
+    <div class="a" style="margin: 23px 0px;">Article-2</div>
+    <div class="a">Article-3</div>
+    </div>
+</div>
+<div id="section-3">
+    <div style="justify-content: center; display:flex; padding: 10px;">Section-3</div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+</div>
+<div id="section-4">
+    <div style="justify-content: center; display:flex; padding: 10px;">Section-4</div>
+    <div id="footer">Footer</div>
+</div>
+
+    </div>
+    
+</body>
+</html>
