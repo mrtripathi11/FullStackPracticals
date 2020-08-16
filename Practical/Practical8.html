@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-8</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+            
+        }
+        #section-1 {
+            justify-content: center;
+            background-color: indianred;
+            font-size: 40px;
+            margin-top: 8px;
+            height: 450px;
+            color: white;
+            width: 100%;
+
+        }
+
+        .circle {
+            border-radius: 50%;
+            background-color: cadetblue;
+            width: 251px;
+            height: 251px;
+            float: left;
+            margin: 31px;
+        }
+
+        #section-2 {
+
+            background-color: white;
+            height: 650px;
+            font-size: 40px;
+            margin-top: 8px;
+            width: 100%;
+
+
+        }
+
+        #left {
+            display: flex;
+            float: left;
+            width: 50%;
+            background-color: mediumpurple;
+            margin: 8px 8px 8px 0px;
+            height: 87%;
+
+        }
+
+        #right {
+            float: right;
+            width: 48%;
+            background-color: white;
+            height: 87%;
+            margin: 8px 0px 8px 8px;
+
+        }
+
+        .a {
+            width: 100%;
+            height: 173px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #section-3 {
+            background-color: white;
+            height: 650px;
+            font-size: 40px;
+            margin-top: 8px;
+            width: 100%;
+        }
+
+        .rect {
+            float: left;
+            width: 20%;
+            margin: 20px 20px;
+            box-shadow: 0px 5px 5px darkgrey;
+            background-color: gray;
+        }
+
+        .rect h6 {
+            margin: 0px 10px;
+            text-align: center;
+        }
+
+        .rect img {
+            width: 100%;
+            margin-bottom: 10px;
+            margin-top: 0px;
+            width: 100%;
+        }
+
+        .rect a:hover {
+            background-color: blue;
+        }
+
+        .rect a {
+            display: block;
+            background-color: red;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 8px;
+        }
+
+        #section-4 {
+            background-color: white;
+            height: 145px;
+            font-size: 40px;
+            margin-top: 8px;
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            height: 80px;
+            background-color:tomato;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 0px auto;
+            background-color: darkslategray;
+            position: fixed;
+            top: 0px;
+            overflow: hidden;
+            width: 100%;
+
+        }
+
+        ul li {
+            display: inline-block;
+        }
+
+        ul li a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 28px;
+            width: 252px;
+            text-align: center;
+
+        }
+
+        ul li a:hover {
+            background-color: white;
+            color: black;
+            margin: 3px 0px;
+        }
+
+        #banner {
+            color: white;
+            height: 100%;
+            width: 100%;
+            display: relative;
+
+        }
+
+        #header {
+            height: 64px;
+            background-color: darkslategray;
+            font-size: 40px;
+            width: 100%;
+            margin-bottom: 10px;
+
+
+        }
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+    </style>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <div id="container">
+    <div id="header">
+        <ul style="z-index: 2;">
+            <li><a href="#banner">home</a></li>
+            <li><a href="#section-2">about us</a></li>
+            <li><a href="#section-1">team</a></li>
+            <li><a href="#section-3">technologies</a></li>
+            <li><a href="#section-4">contact</a></li>
+        </ul>
+    </div>
+
+
+    <div id="banner">
+
+        <h1 id="bh" style="font-weight: bold;position:absolute;font-size: 70px; margin: 60px 0px 0px 40px; z-index: 1;">PRACTICAL 8</h1>
+
+
+        <img style="height: 100%; width: 100%; z-index: 1;" src="../image/Practical8.5.png" alt="Banner">
+        
+
+
+    </div>
+    <div id="section-1">
+        <div style="justify-content: center; display: flex; padding: 10px;">Team Members</div>
+        <div class="circle" style="margin-left: 100px;">
+            <img style="border-radius: 50%; width:100%; height:100%; ;" src="../image/Practical8.1.png" alt="">
+        </div>
+        <div class="circle">
+            <img style="border-radius: 50%; width:100%; height:100%;" src="../image/Practical8.2.png" alt="">
+        </div>
+        <div class="circle">
+            <img style="border-radius: 50%; width:251px; height:251px;" src="../image/Practical8.3.png" alt="">
+        </div>
+        <div class="circle">
+            <img style="border-radius: 50%; width:251px; height:251px;" src="../image/Practical8.4.png" alt="">
+        </div>
+    </div>
+    <div id="section-2">
+        <div style="justify-content: center; display:flex; padding: 10px; font-size: 50px;">About Us.</div>
+        <div id="left">
+
+            <div style="font-size: 25px; text-align: justify; margin: 20px; color: white;"> <span
+                    style="font-size: 40px; color: black;">About Projects.</span> <br><br> Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Cumque asperiores facere, dolorum adipisci,
+                expedita dolore beatae, ad illum fugit ratione facilis ut eligendi. Unde molestiae suscipit
+                repellendus voluptates eligendi repudiandae nemo, alias officiis quo sed quos quisquam accusantium
+                perspiciatis neque reprehenderit itaque necessitatibus doloremque! Ea quae, voluptatem sapiente
+                eveniet, consequuntur praesentium in quo, expedita quos nihil ad iusto quod deleniti vitae voluptas
+                molestias illo molestiae perspiciatis enim! Consectetur ratione quam odit, eius pariatur aliquid
+                quos sint voluptates cumque sapiente veniam minima autem itaque nobis, atque repellendus, dolore ad
+                reprehenderit doloribus illum tempore soluta. Esse quaerat doloribus, veritatis blanditiis quo
+                eaque. 
+            </div>
+        </div>
+        <div id="right">
+            <div class="a">
+                <img src="../image/Practical8.6.png" style="width: 100%; height:173px ;" alt="Project 1">
+            </div>
+            <div class="a" style="margin: 23px 0px;">
+                <img src="../image/Practical8.7.png" style="width: 100%; height:173px ;" alt="Project 2"></div>
+            <div class="a">
+                <img src="../image/Practical8.8.png" style="width: 100%; height:173px ;" alt="Project 3">
+            </div>
+        </div>
+    </div>
+    <div id="section-3">
+        <div style="justify-content: center; display:flex; padding: 10px;">Technologies Used</div>
+        <div class="rect" style="margin-left: 80px;">
+            <img src="..\image\Capture16.PNG" style="height: 164px;" alt="HTML">
+            <h6>Introduction to <br> HTML</h6>
+            <p style="text-align: justify; font-size: 20px; margin: 20px; color: white;">Hypertext Markup Language
+                (HTML) is the
+                standard markup language for documents
+                designed to be displayed in a web browser.Its is a popular language  </p>
+            <a href="html.html">Read More</a>
+
+        </div>
+        <div class="rect">
+            <img src="..\image\Capture15.PNG" alt="CSS">
+            <h6>Introduction to <br> CSS</h6>
+            <p style="text-align: justify; font-size: 20px; margin: 20px; color: white;">Cascading Style Sheets (CSS) is
+                a style
+                sheet language used for describing the
+                presentation of a document written in a markup language.It is extensively used</p>
+            <a href="css.html">Read More</a>
+        </div>
+        <div class="rect">
+            <img src="..\image\Capture17.PNG" alt="JAVASCRIPT">
+            <h6>Introduction to JavaScript</h6>
+            <p style="text-align: justify; font-size: 20px; margin:20px; color: white;">JavaScript often abbreviated as
+                JS, is a
+                programming
+                language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time
+                compiled</p>
+            <a href="javascript.html">Read More</a>
+        </div>
+        <div class="rect">
+            <img src="..\image\Capture14.PNG" alt="BOOTSTRAP">
+            <h6>Introduction to Bootstrap</h6>
+            <p style="text-align: justify; font-size: 20px; margin: 20px;color: white;">Bootstrap is a free and
+                open-source CSS
+                framework directed at responsive,
+                mobile-first front-end web development. It contains CSS- and (optionally) JavaScript</p>
+            <a href="boot.html">Read More</a>
+        </div>
+    </div>
+    <div id="section-4">
+        <div style="justify-content: center; display:flex; padding: 10px;">Contact</div>
+        <div class="footer" style="font-size: 20px;">Website Template for Practical-8 @ <a href="https://www.beta-labs.in/">Beta-labs</a> </div>
+            <div class="footer" style="font-size: 20px; margin: 0px;"> <a href="#header">Back to Top</a> </div>
+</div>
+
+
+</body>
+
+</html>
