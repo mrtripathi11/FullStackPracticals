@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practical-18</title>
+    <link rel="stylesheet" href="../css/p18.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+      <style>
+          *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2f105c;
+}
+.container{
+    width:470px;
+    background-color: white;
+    height:500px;
+    border-radius: 4px;
+}
+#form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding:10px;
+}
+h1{
+    text-align: center;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.input{
+    margin: 15px;
+    height:30px;
+    border:none;
+    outline:none;
+    border-bottom:1px solid black;
+    width: 450px;
+}
+#form small{
+    font-weight: bolder;
+    margin:5px;
+    margin-left:10px;
+    color: red;
+    visibility: hidden;
+}
+.name{
+    display: flex;
+    /* border:1px solid black; */
+}
+.email{
+    display: flex;
+}
+.password{
+    display: flex;
+}
+.confirm-password{
+    display: flex;
+    color: black;
+}
+.name i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:190px;
+    visibility: hidden;
+}
+.email i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:275px;
+    visibility: hidden;
+}
+.password i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:365px;
+    visibility: hidden;
+}
+.confirm-password i{
+    margin:0px;
+    position: absolute;
+    right:550px;
+    text-align: center;
+    top:450px;
+    visibility: hidden;
+}
+#submit-btn{
+    width:425px;
+    height:40px;
+    text-align: center;
+    margin:20px auto;
+    border:none;
+    outline:none;
+    background-color: #874dbd;
+    border-radius:5px;
+    color:white;
+}
+      </style>
+    <div class="container">
+      <form id="form">
+        <h1>Create Account</h1>
+        <div class="name">
+          <input
+            class="input"
+            type="text"
+            id="username"
+            placeholder="Username"
+          />
+          <i id='name-fails' class="fa fa-exclamation-circle" style="color:red"></i>
+          <i id='name-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="user-msg">* njejfwef </small>
+        <div class="email">
+          <input class="input" type="text" id="email" placeholder="Email" />
+          <i id='email-fails' class="fa fa-exclamation-circle" style="color:red"></i>
+          <i id='email-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="email-error">* njejfwef</small>
+        <div class="password">
+          <input
+            class="input"
+            type="password"
+            id="password"
+            placeholder="Password"
+          />
+          <i id='password-fails' class="fa fa-exclamation-circle" style="color:red"></i>
+          <i id='password-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="pass-error">* njejfwef </small>
+        <div class="confirm-password">
+          <input
+            class="input"
+            type="password"
+            id="confirm-password"
+            placeholder="Enter Password Again"
+          />
+          <i id='confirm-fails' class="fa fa-exclamation-circle" style="color:red"></i>
+          <i id='confirm-check' class="fa fa-check-circle" style="color:green"></i>
+        </div>
+        <small id="confirm-error">* njejfwef </small>
+        <button id="submit-btn">Submit</button>
+      </form>
+    </div>
+  </body>
+  <script>
+      var form = document.getElementById("form");
+var username = document.getElementById("username");
+var email = document.getElementById("email");
+var password = document.getElementById("password");
+var confirmPassword = document.getElementById("confirm-password");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  checkValid();
+});
+
+function checkValid() {
+  var userMsg = document.getElementById("user-msg");
+  var nameFails = document.getElementById("name-fails");
+  var nameCheck = document.getElementById("name-check");
+  var emailError = document.getElementById("email-error");
+  var passwordError = document.getElementById("pass-error");
+  var emailFails = document.getElementById("email-fails");
+  var emailcheck = document.getElementById("email-check");
+  var passwordFails = document.getElementById("password-fails");
+  var passwordCheck = document.getElementById("password-check");
+  var confirm = document.getElementById("confirm-password");
+  var confirmError = document.getElementById("confirm-error");
+  var confirmFails = document.getElementById("confirm-fails");
+  var confirmCheck = document.getElementById("confirm-check");
+  if (username.value.trim() === "") {
+    username.style.borderBottom = "1px red solid";
+    userMsg.innerHTML = " User Name cannot be Blank";
+    userMsg.style.visibility = "visible";
+    nameFails.style.visibility = "visible";
+  } else {
+    if (username.value.trim().match(/^[a-z0-9]+$/g)) {
+      userMsg.style.visibility = "hidden";
+      nameFails.style.visibility = "hidden";
+      nameCheck.style.visibility = "visible";
+      username.style.borderBottom = "1px green solid";
+    } else {
+      username.style.borderBottom = "1px red solid";
+      userMsg.innerHTML = "only lowercase with no special symbols";
+      userMsg.style.visibility = "visible";
+      nameFails.style.visibility = "visible";
+      nameCheck.style.visibility = "hidden";
+    }
+  }
+  if (email.value.trim() === "") {
+    email.style.borderBottom = "1px red solid";
+    emailError.innerHTML = "Email Id cannot be Blank";
+    emailError.style.visibility = "visible";
+    emailFails.style.visibility = "visible";
+  } else {
+    if (email.value.trim().match(/^[\w-\.]+@([\w-]+\.)+com$/g)) {
+      emailError.style.visibility = "hidden";
+      emailFails.style.visibility = "hidden";
+      emailcheck.style.visibility = "visible";
+      email.style.borderBottom = "1px green solid";
+    } else {
+      email.style.borderBottom = "1px red solid";
+      emailError.innerHTML = " Enter a valid Email Id";
+      emailError.style.visibility = "visible";
+      emailFails.style.visibility = "visible";
+      emailcheck.style.visibility = "hidden";
+    }
+  }
+  if (password.value.trim() === "") {
+    password.style.borderBottom = "1px red solid";
+    passwordError.innerHTML = " Password 1 can not be Blank";
+    passwordError.style.visibility = "visible";
+    passwordFails.style.visibility = "visible";
+  } else {
+    passwordError.style.visibility = "hidden";
+    passwordFails.style.visibility = "hidden";
+    passwordCheck.style.visibility = "visible";
+    password.style.borderBottom = "1px green solid";
+  }
+  if (confirm.value.trim() === "") {
+    confirm.style.borderBottom = "1px red solid";
+    confirmError.innerHTML = " Password 2 can not be Blank";
+    confirmError.style.visibility = "visible";
+    confirmFails.style.visibility = "visible";
+  } else {
+    if (confirm.value === password.value) {
+      confirmError.style.visibility = "hidden";
+      confirmFails.style.visibility = "hidden";
+      confirmCheck.style.visibility = "visible";
+      confirm.style.borderBottom = "1px green solid";
+    } else {
+      confirm.style.borderBottom = "1px red solid";
+      confirmError.innerHTML = " Password Should be same as above";
+      confirmError.style.visibility = "visible";
+      confirmFails.style.visibility = "visible";
+      confirmCheck.style.visibility = "hidden";
+    }
+  }
+}
+  </script> 
+</html>
